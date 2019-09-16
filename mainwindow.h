@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "pcommserverlib.h"
+
+using namespace  PCOMMSERVERLIB;
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +20,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+public:
+    PCOMMSERVERLIB::PmacDevice* Pmac;
+    void init_pmac();
 };
 
 #endif // MAINWINDOW_H
